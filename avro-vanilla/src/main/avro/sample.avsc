@@ -1,0 +1,76 @@
+{"namespace": "com.github.avro.vanilla.model",
+  "type": "record",
+  "name": "Sample",
+  "fields": [
+
+    // https://avro.apache.org/docs/1.8.2/spec.html#schema_primitive
+    {"name": "booleanValue", "type": "boolean"},
+    {"name": "intValue",  "type": "int"},
+    {"name": "longValue", "type": "long"},
+    {"name": "floatValue", "type": "float"},
+    {"name": "doubleValue", "type": "double"},
+    {"name": "bytesValue", "type": "bytes"},
+    {"name": "stringValue", "type": "string"},
+
+    // Nullable version
+    {"name": "nullBoolean", "type": ["boolean","null"]},
+    {"name": "nullInt",  "type": ["int","null"]},
+    {"name": "nullLong", "type": ["long","null"]},
+    {"name": "nullFloat", "type": ["float","null"]},
+    {"name": "nullDouble", "type": ["double","null"]},
+    {"name": "nullBytes", "type": ["bytes","null"]},
+    {"name": "nullString", "type": ["string","null"]},
+
+    // Logical Types
+    {"name": "myLogicalShit",
+      "type": "bytes",
+      "logicalType": "decimal",
+      "precision": 4,
+      "scale": 2
+    }
+
+    //https://avro.apache.org/docs/1.8.2/spec.html#schema_record
+    //{"name": "someRecord",
+    //  "type": {
+    //    "type": "record",
+    //    "name": "LongList",
+    //    "aliases": ["LinkedLongs"],
+    //    "fields": [
+    //      {"name": "value", "type": "long"},
+    //      {"name": "next", "type": ["null", "LongList"]}
+    //    ]
+    //  }
+    //},
+
+    //https://avro.apache.org/docs/1.8.2/spec.html#Enums
+    //{
+    //  "name": "cardType",
+    //  "type": {
+    //    "type": "enum",
+    //    "name": "Suit",
+    //    "symbols": [
+    //      "SPADES",
+    //      "HEARTS",
+    //      "DIAMONDS",
+    //      "CLUBS"
+    //    ]
+    //  }
+    //},
+
+    //https://avro.apache.org/docs/1.8.2/spec.html#Arrays
+    //{"name": "stringArray",
+    // "type": {"type": "array", "items": "string"}
+    //},
+
+    //https://avro.apache.org/docs/1.8.2/spec.html#Maps
+    //{"name": "longMap",
+    // "type": {"type": "map", "values": "long"}
+    //},
+
+    //https://avro.apache.org/docs/1.8.2/spec.html#Fixed
+    //{"name": "md5",
+    // "type": {"type": "fixed", "size": 16, "name": "md5"}
+    //}
+
+  ]
+}
